@@ -1,0 +1,25 @@
+{
+  "name": "hcmus-20200137-quine-mccluskey",
+  "version": "1.0.0",
+  "description": "Quine-Mccluskey",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaoThanhThienDiCode/HCMUS-20200137-Quine-McCluskey.git"
+  },
+  "author": "BaoBao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaoThanhThienDiCode/HCMUS-20200137-Quine-McCluskey/issues"
+  },
+  "homepage": "https://github.com/BaoThanhThienDiCode/HCMUS-20200137-Quine-McCluskey#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

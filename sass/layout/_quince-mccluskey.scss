@@ -1,0 +1,89 @@
+.Quine-McCluskey {
+  &__entrada {
+    display: flex;
+    #entrada {
+      font-size: 18px;
+      padding: 30px;
+      width: 100%;
+      height: 7.4rem;
+      margin-bottom: 50px;
+    }
+  }
+  &__button {
+    font-size: 18px;
+    padding: 20px 50px;
+    box-shadow: 0 0 20px rgba($color-black, 0.2);
+    border-radius: 4px;
+    background-color: #ffff;
+    border: none;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+  }
+  &__button:hover {
+    background-color: aliceblue;
+    transform: scale(1.05);
+  }
+}
+// tables
+.tables {
+  &__iniciales {
+    display: flex;
+    gap: $default-gap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    &__table1 {
+      th,
+      tr {
+        padding: 25px;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+    &__table2 {
+      th,
+      tr {
+        padding: 25px;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+  }
+  &__procedimientos {
+    padding: 30px;
+    display: flex;
+    gap: $default-gap;
+    justify-content: center;
+    align-self: center;
+    th,
+    tr {
+      padding: 25px;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+  &__finales {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    th,
+    tr {
+      padding: 25px;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+    th:first-child {
+      border: none;
+    }
+  }
+  &__results {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,77 @@
+// ---- 01 TYPOGRAPHY SYSTEM
+// - Font size system (px)
+//       10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+// - Font weights:
+// Defaut 400
+// - line heights:
+// Defaut 1
+// ---- 02 COLORS
+// Primary: #e67e22
+// Tints:
+// Shades:
+// Accents:
+// Greys: #555
+
+// - Spacing system (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-primary-dark;
+  background-color: $color-primary-light;
+  padding: 2.5rem 7.5rem;
+}
+.heading-primary {
+  &-main {
+    display: block;
+    color: $color-primary-dark;
+    text-align: center;
+    font-size: 4.4rem;
+    font-weight: 600;
+    letter-spacing: 0.4rem;
+  }
+}
+//   &-sub {
+//     display: block;
+//     font-size: 20px;
+//     font-weight: 700;
+//     letter-spacing: 17.4px;
+//     animation: moveRight 1s ease-out;
+//     @include respond(phone) {
+//       font-family: 5rem;
+//       letter-spacing: 0.5rem;
+//     }
+//   }
+// }
+// .heading-secondary {
+//   font-size: 3.5rem;
+//   text-transform: uppercase;
+//   font-weight: 700;
+//   display: inline-block;
+//   background-image: linear-gradient(
+//     to right,
+//     $color-primary-light,
+//     $color-primary-dark
+//   );
+//   -webkit-background-clip: text;
+//   color: transparent;
+//   letter-spacing: 0.2rem;
+//   transition: all 0.2s;
+
+//   &:hover {
+//     transform: skewY(2deg) skewX(15deg) scale(1.1);
+//     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+//   }
+// }
+// .heading-tertiary {
+//   font-size: $default-font-size;
+//   font-weight: 700;
+//   text-transform: uppercase;
+// }
+// .paragraph {
+//   font-size: $default-font-size;
+//   &:not(:last-child) {
+//     margin-bottom: 3rem;
+//   }
+// }

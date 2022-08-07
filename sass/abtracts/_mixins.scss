@@ -1,0 +1,20 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(-50%, -50%);
+}
+// $breakpoint arguement choices
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+// ORDER: Base + typography > general layout + grid > page layout > components
+// 1em = 16px

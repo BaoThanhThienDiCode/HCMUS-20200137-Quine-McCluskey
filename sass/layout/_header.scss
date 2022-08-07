@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4.4rem;
+  &__logo {
+    height: 100px;
+    animation: roll 3s ease-in-out;
+    transition: all 0.3s;
+  }
+}
