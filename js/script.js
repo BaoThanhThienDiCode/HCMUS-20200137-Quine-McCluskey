@@ -228,11 +228,6 @@ function app(entrada) {
                   errorCmp++;
                 }
               }
-              // console.log('-----------------');
-              // console.log(row1[0] + " " + row1[1]);
-              // console.log(row2[0] + " " + row2[1]);
-              // console.log(errorCmp + " " + errorCmp);
-              // console.log('-----------------');
               if (errorCmp < 2) {
                 if (isRepeted(tempArr, temp) == false) {
                   tempArr[index_element++] =
@@ -292,7 +287,6 @@ function app(entrada) {
         }
       }
       index_element = 0;
-      // console.log(tempArr);
       if (tempArr == 0 && rr == 0) {
         excep = 1;
       } else {
@@ -411,9 +405,6 @@ function app(entrada) {
 
   document.querySelector("#finales").innerHTML = finales;
 
-  // implicants[1][1] = "x1-1";
-  // console.table(implicants);
-
   let countX = 0;
   let lastX = 0;
   let xUsed = [];
@@ -427,13 +418,9 @@ function app(entrada) {
 
   let implicants3 = [];
   let indexImplicants3 = 0;
-  // console.log(grupo);
 
-  // grupo -> COLUMNAS
-  // gruoup1 -> FILAS
-
-  // BUSCAMOS LAS COLUMNAS CON UNA X
-  // ENTRAMOS A LAS COLUMNAS
+  // WE LOOK FOR THE COLUMNS WITH AN X
+  // WE ENTER THE COLUMNS
   for (let i = 0; i < grupo.length; i++) {
     // ENTRAMOS A LAS FILAS
     for (let i2 = 0; i2 < group1.length; i2++) {
@@ -459,7 +446,7 @@ function app(entrada) {
     countX = 0;
   }
 
-  // EXPANDIMOS VERTICALMENTE EN TODAS LAS X
+  // EXPAND VERTICALLY IN ALL X
   for (let i = 0; i < grupo.length; i++) {
     for (let i2 = 0; i2 < group1.length; i2++) {
       if (
@@ -507,11 +494,11 @@ function app(entrada) {
 
   // let tempArr = [];
 
-  // BUSCAMOS LAS COLUMNAS CON 2 O MÁS X
+  // WE LOOK FOR THE COLUMNS WITH 2 OR MORE X
   for (let i = 0; i < grupo.length; i++) {
     // RECORREMOS LAS FILAS
     for (let i2 = 0; i2 < group1.length; i2++) {
-      // SI TIENE X ENTRAMOS / SI NO HA SIDO USADA
+      // IF IT HAS X WE ENTER / IF IT HAS NOT BEEN USED
       if (
         implicants[i2][i].includes("x") &&
         xUsed.indexOf(implicants[i2][i]) == -1
@@ -540,27 +527,27 @@ function app(entrada) {
         let columnaPC = 0;
 
         console.log("FILA: " + i2 + " | " + implicants[i2][i]);
-        // RECORREMOS LAS COLUMNAS
+        // WE GO THROUGH THE COLUMNS
         for (let i3 = 0; i3 < grupo.length; i3++) {
-          // SI HAY X
+          // IF THERE IS X
           if (implicants[i2][i3].includes("x")) {
             // SI NO HA SIDO USADA
             if (tempxUsed.indexOf(implicants[i2][i3]) == -1) {
-              // BUSCAMOS SI TIENE UN VALOR QUE NOS FALTA
+              // WE SEARCH IF IT HAS A VALUE THAT WE ARE MISSING
               console.log("NOS FALTA:");
               console.log(tempFalta);
               let index = tempFalta.indexOf(implicants[i2][i3].split(",")[2]);
               console.log("VALOR ACTUAL: " + implicants[i2][i3].split(",")[2]);
               if (index == -1) {
-                // REDUNDANTE
+                // REDUNDANT
                 console.log("YA LO TENEMOS: " + implicants[i2][i3]);
-                // NO EXPANDIMOS
+                // WE DON'T EXPAND
                 contiene = false;
               } else {
-                // INCOMPLETO
+                // INCOMPLETE
                 console.log("NO LO TENEMOS: " + implicants[i2][i3]);
                 if (ocupado == true) {
-                  // GUARDAMOS PRIMERA COINCIDENCIA
+                  // SAVE FIRST MATCH
                   if (filaPrimeraCoincidencia == 0) {
                     filaPrimeraCoincidencia = i2;
                     columnaPC = i3;
@@ -573,34 +560,30 @@ function app(entrada) {
                     posibleImplicant[indexPosibleImplicant][0] += 1;
                   }
                 }
-                // col[indexCol++] = i3;
-                // tempxUsed[tempindexXused++] = implicants[i2][i3];
-                // tempFalta[index] = '-';
               }
             } else {
               console.log("ESTÁ OCUPADO: " + implicants[i2][i3]);
-              // NO EXPANDIMOS
+              // WE DON'T EXPAND
               ocupado = true;
             }
           }
         }
-        // indexPosibleImplicant++;
 
         let alternativas = false;
         console.log("TIENE VALORES: " + posibleImplicant);
-        // SI ESTÁ OCUPADO, BUSCAMOS ALTERNATIVAS
+        // IF YOU ARE BUSY, WE LOOK FOR ALTERNATIVES
         if (ocupado == true) {
           for (let i3 = 0; i3 < group1.length; i3++) {
-            // BUSCAMOS UNA X EN LA COLUMNA DE LA PRIMERA COINCIDENCIA
+            // WE LOOK FOR AN X IN THE COLUMN OF THE FIRST MATCH
             if (implicants[i3][columnaPC].includes("x")) {
-              // SALTAMOS LA PRIMERA COINCIDENCIA
+              // WE SKIP THE FIRST MATCH
               if (i3 != filaPrimeraCoincidencia) {
                 alternativas = true;
                 let unico = 0;
                 for (let i4 = 0; i4 < grupo.length; i4++) {
-                  // SI HAY X EN LAS ALTETNATIVAS
+                  // IF THERE IS X IN THE ALTERNATIVES
                   if (implicants[i3][i4].includes("x")) {
-                    // SI NO HA SIDO USADA
+                    // IF IT HASN'T BEEN USED
                     if (tempxUsed.indexOf(implicants[i3][i4]) == -1) {
                       let index = tempFalta.indexOf(
                         implicants[i3][i4].split(",")[2]
