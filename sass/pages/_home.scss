@@ -1,6 +1,17 @@
 //
 .Section-Quine-McCluskey {
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   padding: 50px;
+}
+main {
+  padding: 40px;
+  @include respond(tab-port) {
+    padding: 20px;
+  }
+}
+footer {
+  p {
+    text-align: center;
+  }
 }

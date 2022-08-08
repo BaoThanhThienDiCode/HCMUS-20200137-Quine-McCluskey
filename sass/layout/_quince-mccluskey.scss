@@ -1,12 +1,26 @@
 .Quine-McCluskey {
   &__entrada {
-    display: flex;
+    width: 100%;
+    @include respond(tab-port) {
+      position: relative;
+    }
+
     #entrada {
       font-size: 18px;
       padding: 30px;
       width: 100%;
-      height: 7.4rem;
       margin-bottom: 50px;
+      @include respond(tab-port) {
+        position: absolute;
+        height: 4rem;
+        width: 300px;
+        right: -90px;
+        top: 20px;
+      }
+    }
+  }
+  &____datos {
+    @include respond(tab-port) {
     }
   }
   &__button {
@@ -20,6 +34,11 @@
     cursor: pointer;
     transition: all 0.5s;
     margin-bottom: 20px;
+    @include respond(tab-port) {
+      position: absolute;
+      left: 100px;
+      top: 420px;
+    }
   }
   &__button:hover {
     background-color: aliceblue;
@@ -28,16 +47,21 @@
 }
 // tables
 .tables {
+  width: 60vw;
+  height: 70vh;
   &__iniciales {
     display: flex;
     gap: $default-gap;
     justify-content: center;
     align-items: center;
     padding: 30px;
+    @include respond(tab-port) {
+      display: block;
+    }
     &__table1 {
       th,
       tr {
-        padding: 25px;
+        padding: 15px;
         font-size: 1.6rem;
         text-align: center;
       }
@@ -45,7 +69,7 @@
     &__table2 {
       th,
       tr {
-        padding: 25px;
+        padding: 15px;
         font-size: 1.6rem;
         text-align: center;
       }
@@ -59,19 +83,19 @@
     align-self: center;
     th,
     tr {
-      padding: 25px;
+      padding: 15px;
       font-size: 1.6rem;
       text-align: center;
     }
   }
   &__finales {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-self: center;
     th,
     tr {
-      padding: 25px;
+      padding: 15px;
       font-size: 1.6rem;
       text-align: center;
     }
@@ -80,7 +104,7 @@
     }
   }
   &__results {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-self: center;

@@ -6,6 +6,23 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 *,
 *::after,
@@ -16,10 +33,22 @@ Dark green: #28b485
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
-  padding: 30px; }
+  padding: 3rem 7.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 5.5rem 7.5rem 5.5rem 7.5rem; } }
 
 @keyframes roll {
   0% {
@@ -27,41 +56,12 @@ body {
   100% {
     transform: rotateY(360deg); } }
 
-@keyframes moveLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px); }
-  80% {
-    transform: translateX(10px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px); }
-  80% {
-    transform: translateX(-10px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0px); } }
-
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #087f5b;
-  background-color: #b2f2bb;
-  padding: 2.5rem 7.5rem; }
+  background-color: #b2f2bb; }
 
 .heading-primary-main {
   display: block;
@@ -70,6 +70,12 @@ body {
   font-size: 4.4rem;
   font-weight: 600;
   letter-spacing: 0.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-primary-main {
+      font-size: 2.2rem;
+      letter-spacing: 0.2rem;
+      margin-top: 30px;
+      margin-bottom: -35px; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -130,16 +136,22 @@ body {
   display: none; }
 
 .modal-1 {
+  overflow: scroll;
+  flex-shrink: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-  background-color: white;
   padding: 6rem;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10; }
+  @media only screen and (max-width: 56.25em) {
+    .modal-1 {
+      width: 90%;
+      padding: 3rem; } }
 
 .overlay {
   position: absolute;
@@ -154,20 +166,38 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 4.4rem; }
+  margin-top: 6rem; }
   .header__logo {
     height: 100px;
     animation: roll 3s ease-in-out;
     transition: all 0.3s; }
+  @media only screen and (max-width: 56.25em) {
+    .header__box-img {
+      display: flex;
+      justify-content: center; } }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      display: block;
+      margin-top: 3rem;
+      margin-bottom: 4rem; } }
 
 .Quine-McCluskey__entrada {
-  display: flex; }
+  width: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .Quine-McCluskey__entrada {
+      position: relative; } }
   .Quine-McCluskey__entrada #entrada {
     font-size: 18px;
     padding: 30px;
     width: 100%;
-    height: 7.4rem;
     margin-bottom: 50px; }
+    @media only screen and (max-width: 56.25em) {
+      .Quine-McCluskey__entrada #entrada {
+        position: absolute;
+        height: 4rem;
+        width: 300px;
+        right: -90px;
+        top: 20px; } }
 
 .Quine-McCluskey__button {
   font-size: 18px;
@@ -180,64 +210,78 @@ body {
   cursor: pointer;
   transition: all 0.5s;
   margin-bottom: 20px; }
+  @media only screen and (max-width: 56.25em) {
+    .Quine-McCluskey__button {
+      position: absolute;
+      left: 100px;
+      top: 420px; } }
 
 .Quine-McCluskey__button:hover {
   background-color: aliceblue;
   transform: scale(1.05); }
 
-.tables__iniciales {
-  display: flex;
-  gap: 1.6rem;
-  justify-content: center;
-  align-items: center;
-  padding: 30px; }
-  .tables__iniciales__table1 th,
-  .tables__iniciales__table1 tr {
-    padding: 25px;
-    font-size: 1.6rem;
-    text-align: center; }
-  .tables__iniciales__table2 th,
-  .tables__iniciales__table2 tr {
-    padding: 25px;
-    font-size: 1.6rem;
-    text-align: center; }
-
-.tables__procedimientos {
-  padding: 30px;
-  display: flex;
-  gap: 1.6rem;
-  justify-content: center;
-  align-self: center; }
-  .tables__procedimientos th,
-  .tables__procedimientos tr {
-    padding: 25px;
-    font-size: 1.6rem;
-    text-align: center; }
-
-.tables__finales {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-self: center; }
-  .tables__finales th,
-  .tables__finales tr {
-    padding: 25px;
-    font-size: 1.6rem;
-    text-align: center; }
-  .tables__finales th:first-child {
-    border: none; }
-
-.tables__results {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  font-size: 3.2rem; }
-
-main {
-  padding: 40px; }
+.tables {
+  width: 60vw;
+  height: 70vh; }
+  .tables__iniciales {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; }
+    @media only screen and (max-width: 56.25em) {
+      .tables__iniciales {
+        display: block; } }
+    .tables__iniciales__table1 th,
+    .tables__iniciales__table1 tr {
+      padding: 15px;
+      font-size: 1.6rem;
+      text-align: center; }
+    .tables__iniciales__table2 th,
+    .tables__iniciales__table2 tr {
+      padding: 15px;
+      font-size: 1.6rem;
+      text-align: center; }
+  .tables__procedimientos {
+    padding: 30px;
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    align-self: center; }
+    .tables__procedimientos th,
+    .tables__procedimientos tr {
+      padding: 15px;
+      font-size: 1.6rem;
+      text-align: center; }
+  .tables__finales {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center; }
+    .tables__finales th,
+    .tables__finales tr {
+      padding: 15px;
+      font-size: 1.6rem;
+      text-align: center; }
+    .tables__finales th:first-child {
+      border: none; }
+  .tables__results {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 3.2rem; }
 
 .Section-Quine-McCluskey {
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   padding: 50px; }
+
+main {
+  padding: 40px; }
+  @media only screen and (max-width: 56.25em) {
+    main {
+      padding: 20px; } }
+
+footer p {
+  text-align: center; }

@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/katex.min.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="header">
-      <img src="img/Logo.png" class="header__logo" alt="Logo" />
+      <div class="header__box-img">
+        <img src="img/Logo.png" class="header__logo" alt="Logo" />
+      </div>
+      
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item show-modal-1">
@@ -17,12 +21,6 @@
           </li>
           <li class="navigation__item show-modal">
             <a href="#" class="navigation__link">Profile</a>
-          </li>
-          <li class="navigation__item show-modal">
-            <a href="#" class="navigation__link">Project</a>
-          </li>
-          <li class="navigation__item show-modal">
-            <a href="#" class="navigation__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -55,16 +53,12 @@
               <!-- <div id="borrar">X</div> -->
             </div>
             <button class="button Quine-McCluskey__button show-modal-1" id="calcular"><span>Calculate</span></button>
-            <div class="advertencia Quine-McCluskey__advertencia ">
-              <p>
-                Ứng dụng vẫn đang được phát triển, kết quả có thể không đầy đủ
-              </p>
-            </div>
         </div>
         <!-- hello -->
         
         
         <div class="modal-1 hidden">
+          <button class="close-modal">&times;</button>
           <div class="tables">
             <div id="iniciales" class="tables__iniciales">
               <div id="tabla1" class="tables__iniciales__table1"></div>
@@ -80,7 +74,7 @@
     </main>
     <footer>
       <p class="copyright">
-        Copyright © <span class="year">2022</span> by Omnifood, Inc.
+        Copyright © <span class="year">2022</span> by BaoKute.
         All rights reserved.
       </p>
     </footer>
