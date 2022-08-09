@@ -101,7 +101,9 @@ body {
 .navigation__list {
   list-style: none;
   display: flex;
-  gap: 1.6rem; }
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center; }
 
 .navigation__list:hover {
   gap: 1.22; }
@@ -189,15 +191,8 @@ body {
   .Quine-McCluskey__entrada #entrada {
     font-size: 18px;
     padding: 30px;
-    width: 100%;
+    width: 70vw;
     margin-bottom: 50px; }
-    @media only screen and (max-width: 56.25em) {
-      .Quine-McCluskey__entrada #entrada {
-        position: absolute;
-        height: 4rem;
-        width: 300px;
-        right: -90px;
-        top: 20px; } }
 
 .Quine-McCluskey__button {
   font-size: 18px;
@@ -210,11 +205,6 @@ body {
   cursor: pointer;
   transition: all 0.5s;
   margin-bottom: 20px; }
-  @media only screen and (max-width: 56.25em) {
-    .Quine-McCluskey__button {
-      position: absolute;
-      left: 100px;
-      top: 420px; } }
 
 .Quine-McCluskey__button:hover {
   background-color: aliceblue;
@@ -222,26 +212,36 @@ body {
 
 .tables {
   width: 60vw;
-  height: 70vh; }
+  height: 70vh;
+  margin: auto; }
   .tables__iniciales {
-    display: flex;
     gap: 1.6rem;
-    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 30px; }
+    justify-content: center; }
     @media only screen and (max-width: 56.25em) {
       .tables__iniciales {
-        display: block; } }
+        flex-direction: column; } }
     .tables__iniciales__table1 th,
     .tables__iniciales__table1 tr {
       padding: 15px;
       font-size: 1.6rem;
       text-align: center; }
+      @media only screen and (max-width: 37.5em) {
+        .tables__iniciales__table1 th,
+        .tables__iniciales__table1 tr {
+          padding: 10px; } }
     .tables__iniciales__table2 th,
     .tables__iniciales__table2 tr {
       padding: 15px;
       font-size: 1.6rem;
       text-align: center; }
+      @media only screen and (max-width: 37.5em) {
+        .tables__iniciales__table2 th,
+        .tables__iniciales__table2 tr {
+          padding: 10px; } }
   .tables__procedimientos {
     padding: 30px;
     display: flex;
@@ -253,6 +253,10 @@ body {
       padding: 15px;
       font-size: 1.6rem;
       text-align: center; }
+      @media only screen and (max-width: 37.5em) {
+        .tables__procedimientos th,
+        .tables__procedimientos tr {
+          padding: 10px; } }
   .tables__finales {
     padding: 20px;
     display: flex;
@@ -263,6 +267,10 @@ body {
       padding: 15px;
       font-size: 1.6rem;
       text-align: center; }
+      @media only screen and (max-width: 37.5em) {
+        .tables__finales th,
+        .tables__finales tr {
+          padding: 10px; } }
     .tables__finales th:first-child {
       border: none; }
   .tables__results {
@@ -271,11 +279,19 @@ body {
     justify-content: center;
     align-self: center;
     font-size: 3.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .tables__results {
+        padding: 15px;
+        font-size: 2.5rem; } }
 
 .Section-Quine-McCluskey {
   width: 100%;
   height: 45vh;
-  padding: 50px; }
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 main {
   padding: 40px; }

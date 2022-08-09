@@ -23,6 +23,8 @@
     list-style: none;
     display: flex;
     gap: $default-gap;
+    align-items: center;
+    justify-content: center;
   }
   &__list:hover {
     gap: 1.22;

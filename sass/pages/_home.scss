@@ -3,6 +3,10 @@
   width: 100%;
   height: 45vh;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 main {
   padding: 40px;

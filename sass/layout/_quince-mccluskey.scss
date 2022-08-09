@@ -8,15 +8,8 @@
     #entrada {
       font-size: 18px;
       padding: 30px;
-      width: 100%;
+      width: 70vw;
       margin-bottom: 50px;
-      @include respond(tab-port) {
-        position: absolute;
-        height: 4rem;
-        width: 300px;
-        right: -90px;
-        top: 20px;
-      }
     }
   }
   &____datos {
@@ -34,11 +27,6 @@
     cursor: pointer;
     transition: all 0.5s;
     margin-bottom: 20px;
-    @include respond(tab-port) {
-      position: absolute;
-      left: 100px;
-      top: 420px;
-    }
   }
   &__button:hover {
     background-color: aliceblue;
@@ -49,14 +37,16 @@
 .tables {
   width: 60vw;
   height: 70vh;
+  margin: auto;
   &__iniciales {
-    display: flex;
     gap: $default-gap;
-    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 30px;
+    justify-content: center;
     @include respond(tab-port) {
-      display: block;
+      flex-direction: column;
     }
     &__table1 {
       th,
@@ -64,6 +54,9 @@
         padding: 15px;
         font-size: 1.6rem;
         text-align: center;
+        @include respond(phone) {
+          padding: 10px;
+        }
       }
     }
     &__table2 {
@@ -72,6 +65,9 @@
         padding: 15px;
         font-size: 1.6rem;
         text-align: center;
+        @include respond(phone) {
+          padding: 10px;
+        }
       }
     }
   }
@@ -86,6 +82,9 @@
       padding: 15px;
       font-size: 1.6rem;
       text-align: center;
+      @include respond(phone) {
+        padding: 10px;
+      }
     }
   }
   &__finales {
@@ -98,6 +97,9 @@
       padding: 15px;
       font-size: 1.6rem;
       text-align: center;
+      @include respond(phone) {
+        padding: 10px;
+      }
     }
     th:first-child {
       border: none;
@@ -109,5 +111,9 @@
     justify-content: center;
     align-self: center;
     font-size: 3.2rem;
+    @include respond(phone) {
+      padding: 15px;
+      font-size: 2.5rem;
+    }
   }
 }
