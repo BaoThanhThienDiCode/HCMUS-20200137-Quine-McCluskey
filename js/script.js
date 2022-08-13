@@ -80,7 +80,7 @@ function app(entrada) {
   // Create table 1
   let insert = "";
   let tabla1 = "";
-  tabla1 += `<table border=1><thead><tr><th>M</th>`;
+  tabla1 += `<table border=1><thead><tr><th>Decimal</th>`;
 
   let len = Math.pow(2, variable);
   let s = [];
@@ -90,7 +90,7 @@ function app(entrada) {
     tabla1 += "<th>" + abc[i].toUpperCase() + "</th>";
   }
 
-  tabla1 += "<th>indice</th></tr></thead><tbody>";
+  tabla1 += "<th>Index</th></tr></thead><tbody>";
 
   for (let i = 0; i < len; i++) {
     let bin = "";
@@ -151,7 +151,7 @@ function app(entrada) {
   }
 
   let tabla2 = "";
-  tabla2 += "<table border=1><thead><tr><th>Grupo</th><th>M</th>";
+  tabla2 += "<table border=1><thead><tr><th>Group</th><th>Decimal</th>";
   for (let i = 0; i < variable; i++) {
     tabla2 += "<th>" + abc[i].toUpperCase() + "</th>";
   }
@@ -306,7 +306,7 @@ function app(entrada) {
     index3 = 0;
     if (to.length >= 1) {
       tabla +=
-        "<table border=1><thead><tr><th>Tabla " +
+        "<table border=1><thead><tr><th>Table " +
         tables +
         "</th><tr></thead><tbody>";
 
