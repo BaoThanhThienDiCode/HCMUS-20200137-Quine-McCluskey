@@ -141,7 +141,7 @@
   font-size: 1.6rem;
   font-weight: bold;
   @include respond(phone) {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 .tables__finales,
@@ -155,7 +155,7 @@
   font-weight: bold;
   margin-bottom: 25px;
   @include respond(phone) {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 .tables__results::before {
@@ -164,7 +164,7 @@
   font-weight: bold;
   margin-bottom: 25px;
   @include respond(phone) {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 .tables__finales table thead tr th,

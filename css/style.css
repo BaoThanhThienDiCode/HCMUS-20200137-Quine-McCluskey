@@ -363,7 +363,7 @@ body {
   font-weight: bold; }
   @media only screen and (max-width: 37.5em) {
     .tables__procedimientos::before {
-      font-size: 1rem; } }
+      font-size: 1.4rem; } }
 
 .tables__finales,
 .tables__results {
@@ -377,7 +377,7 @@ body {
   margin-bottom: 25px; }
   @media only screen and (max-width: 37.5em) {
     .tables__finales::before {
-      font-size: 1rem; } }
+      font-size: 1.4rem; } }
 
 .tables__results::before {
   content: "Bước 4: Kết Quả";
@@ -386,7 +386,7 @@ body {
   margin-bottom: 25px; }
   @media only screen and (max-width: 37.5em) {
     .tables__results::before {
-      font-size: 1rem; } }
+      font-size: 1.4rem; } }
 
 .tables__finales table thead tr th,
 .tables__finales table tbody tr td {
