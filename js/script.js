@@ -77,6 +77,7 @@ function app(entrada) {
     }
     return foundArr;
   }
+
   // Create table 1
   let insert = "";
   let tabla1 = "";
@@ -149,9 +150,9 @@ function app(entrada) {
     index++;
     index_element = 0;
   }
-
+  // creat sort index
   let tabla2 = "";
-  tabla2 += "<table border=1><thead><tr><th>Group</th><th>Decimal</th>";
+  tabla2 += "<table border=1><thead><tr><th>Group</th><th>Decial</th>";
   for (let i = 0; i < variable; i++) {
     tabla2 += "<th>" + abc[i].toUpperCase() + "</th>";
   }
@@ -181,6 +182,7 @@ function app(entrada) {
   tabla2 += "</tbody></table>";
   document.querySelector("#tabla2").innerHTML = tabla2;
 
+  // Start create table 1 and 2
   let proc = "";
   let rr = 0;
 
@@ -306,7 +308,7 @@ function app(entrada) {
     index3 = 0;
     if (to.length >= 1) {
       tabla +=
-        "<table border=1><thead><tr><th>Table " +
+        `<table class"table" border=1><thead><tr><th>Table ` +
         tables +
         "</th><tr></thead><tbody>";
 

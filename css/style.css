@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 COLORS:
 
@@ -287,15 +288,6 @@ body {
         .tables__iniciales__table1 th,
         .tables__iniciales__table1 tr {
           padding: 10px; } }
-    .tables__iniciales__table2 th,
-    .tables__iniciales__table2 tr {
-      padding: 15px;
-      font-size: 1.6rem;
-      text-align: center; }
-      @media only screen and (max-width: 37.5em) {
-        .tables__iniciales__table2 th,
-        .tables__iniciales__table2 tr {
-          padding: 10px; } }
   .tables__procedimientos {
     padding: 30px;
     display: flex;
@@ -337,6 +329,92 @@ body {
       .tables__results {
         padding: 15px;
         font-size: 2.5rem; } }
+
+.tables__procedimientos th,
+.tables__procedimientos tr {
+  padding: 10px;
+  font-size: 1.6rem;
+  text-align: center; }
+
+.tables__procedimientos th {
+  border: none;
+  border-bottom: 1px solid #111; }
+
+.tables__procedimientos td {
+  border: none;
+  border-bottom: 1px solid #111; }
+
+.tables__procedimientos {
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 5px;
+  gap: 5rem; }
+
+.tables__procedimientos table {
+  width: 80%; }
+
+.tables__procedimientos table tbody tr:last-child td {
+  border: none; }
+
+.tables__procedimientos::before {
+  content: "Bước 2: Tìm tích Tìm tích cực tiểu bằng cách tìm những cặp số khác nhau 1 bit. Vị trí khác nhau được đánh dấu bằng dấu gạch giữa ' - ' và tiếp tục tìm trong Table 1 những cặp khác nhau 1 bit.";
+  font-size: 1.6rem;
+  font-weight: bold; }
+  @media only screen and (max-width: 37.5em) {
+    .tables__procedimientos::before {
+      font-size: 1rem; } }
+
+.tables__finales,
+.tables__results {
+  flex-direction: column;
+  align-items: center; }
+
+.tables__finales::before {
+  content: "Bước 3: Lập bảng để tìm các tích quan trọng từ các tích cực tiểu.";
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 25px; }
+  @media only screen and (max-width: 37.5em) {
+    .tables__finales::before {
+      font-size: 1rem; } }
+
+.tables__results::before {
+  content: "Bước 4: Kết Quả";
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 25px; }
+  @media only screen and (max-width: 37.5em) {
+    .tables__results::before {
+      font-size: 1rem; } }
+
+.tables__finales table thead tr th,
+.tables__finales table tbody tr td {
+  border: none; }
+
+.tables__finales table tbody tr td:not(:last-child) {
+  border: none;
+  border-right: 1px solid #111;
+  border-bottom: 1px solid #111; }
+
+.tables__finales table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #111; }
+
+.tables__finales table tbody tr:last-child td {
+  border-bottom: none; }
+
+.tables__finales table {
+  padding: 0px;
+  border: none; }
+
+.tables__finales table thead tr th:not(:last-child) {
+  border-right: 1px solid #111; }
+
+.tables__finales table thead tr th:not(:last-child) {
+  border-bottom: 1px solid #111; }
+
+.tables__finales table thead tr th:last-child {
+  border-bottom: 1px solid #111; }
 
 .Section-Quine-McCluskey {
   width: 100%;
