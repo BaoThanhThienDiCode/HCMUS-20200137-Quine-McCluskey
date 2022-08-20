@@ -5,7 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quine McCluskey</title>
-    <link rel="stylesheet" href="css/katex.min.css">
+    <!-- Import katex -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+          });
+      });
+    </script>
+    <!-- CSS Style -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -19,19 +39,34 @@
           <li class="navigation__item show-modal-2">
             <a href="#" class="navigation__link"> How to use Quine McCluskey</a>
           </li>
-          <li class="navigation__item show-modal">
+          <li class="navigation__item show-modal-3">
             <a href="#" class="navigation__link">Profile</a>
           </li>
         </ul>
       </nav>
+      <div class="modal-3 hidden profile">
+        <button class="close-modal-3">&times;</button>
+        <!-- hello -->
+        <div class="profile__box__img">
+          <img class="profile__img" src="img/logo3.png" alt="img-profile">
+        </div>
+        
+        <ul>_
+          <li class="profile__name"><span>Họ và tên:</span><p>Lê Tấn Bảo Bảo</p></li>
+          <li class="profile__mssv"><span>MSSV:</span><p>20200137</p></li>
+          <li class="profile__describe"><span>Mô tả website:</span><p>Rút gọn biểu thức bằng thuật toán Quine-McCluskey với n biến</p></li>
+          <li class="profile__describe"><span>Language programming:</span><p>Javacript</p></li>
+        </ul>
+      </div>
+      <div class="overlay-3 hidden"></div>
       <div class="modal-2 hidden">
         <button class="close-modal-2">&times;</button>
         <h2 class="u-center-text u-margin-bottom-medium">Các bước làm rút gọn bằng phương pháp McCluskey</h2>
         <ul>
-          <li><span>Bước 1:</span>Đổi các đỉnh 1 ra các số nhị phân.</li>
-          <li><span>Bước 2:</span>Tìm tích cực tiểu bằng cách tìm những cặp số khác nhau 1 bit. Vị trí khác nhau được đánh dấu bằng dấu gạch giữa "-".</li>
-          <li><span>Bước 3:</span>Tiếp tục tìm trong bước 2 những cặp khác nhau 1 bit.</li>
-          <li><span>Bước 4:</span>Lập bảng để tìm các tích quan trọng từ các tích cực tiểu.</li>
+          <li><span>Bước 1:</span>Đổi các đỉnh 1 ra các số nhị phân và phân chia từng nhóm ra có tổng số bit 1 bằng nhau.</li>
+          <li><span>Bước 2:</span>Tìm tích cực tiểu bằng cách tìm những cặp số khác nhau 1 bit. Vị trí khác nhau được đánh dấu bằng dấu gạch giữa "-" và tiếp tục tìm trong bảng trên những cặp khác nhau 1 bit</li>
+          <li><span>Bước 3:</span>Lập bảng để tìm các tích quan trọng từ các tích cực tiểu.</li>
+          <li><span>Bước 4:</span>Kết quả.</li>
         </ul>
       </div>
       <div class="overlay-2 hidden"></div>

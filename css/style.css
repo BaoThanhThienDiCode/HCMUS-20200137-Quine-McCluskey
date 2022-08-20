@@ -220,6 +220,48 @@ body {
   border: none;
   background: none; }
 
+.modal-3 {
+  overflow: scroll;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  padding: 6rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10; }
+  @media only screen and (max-width: 56.25em) {
+    .modal-3 {
+      width: 90%;
+      padding: 3rem; } }
+
+.overlay-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5; }
+
+.show-modal-3 {
+  border-radius: 10rem;
+  cursor: pointer; }
+
+.close-modal-3 {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none; }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -464,6 +506,31 @@ body {
     text-align: center; }
   .tables__iniciales__table2 tbody tr td:not(:last-child) {
     border-right: 1px solid #111; }
+
+.profile {
+  color: #222; }
+  .profile__box__img {
+    display: flex;
+    justify-content: center; }
+  .profile__img {
+    width: 500px;
+    margin-bottom: 30px; }
+  .profile ul {
+    list-style: none; }
+  .profile span {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 50%;
+    padding-left: 190px; }
+  .profile li {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .profile li p {
+      width: 70%;
+      text-align: center; }
 
 .Section-Quine-McCluskey {
   width: 100%;

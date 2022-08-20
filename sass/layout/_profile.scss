@@ -1,0 +1,32 @@
+.profile {
+  color: #222;
+  &__box__img {
+    display: flex;
+    justify-content: center;
+  }
+  &__img {
+    width: 500px;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+  }
+  span {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 50%;
+    padding-left: 190px;
+  }
+  li {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      width: 70%;
+      text-align: center;
+    }
+  }
+}

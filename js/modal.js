@@ -56,3 +56,31 @@ document.addEventListener("keydown", function (e) {
     closeModal1();
   }
 });
+// modal 3
+const modal2 = document.querySelector(".modal-3");
+const overlay2 = document.querySelector(".overlay-3");
+const btnCloseModal2 = document.querySelector(".close-modal-3");
+const btnsOpenModal2 = document.querySelectorAll(".show-modal-3");
+const openModal2 = function () {
+  modal2.classList.remove("hidden");
+  overlay2.classList.remove("hidden");
+};
+
+const closeModal2 = function () {
+  modal2.classList.add("hidden");
+  overlay2.classList.add("hidden");
+};
+
+for (let i = 0; i < btnsOpenModal.length; i++)
+  btnsOpenModal2[i].addEventListener("click", openModal2);
+
+btnCloseModal2.addEventListener("click", closeModal2);
+overlay2.addEventListener("click", closeModal2);
+
+document.addEventListener("keydown", function (e) {
+  // console.log(e.key);
+
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal2();
+  }
+});

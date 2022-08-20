@@ -91,7 +91,7 @@ function app(entrada) {
     tabla1 += "<th>" + abc[i].toUpperCase() + "</th>";
   }
 
-  tabla1 += "<th>Tổng số 1 trong ABCD</th></th></tr></thead><tbody>";
+  tabla1 += "<th>Tổng số 1 trong ABCD...</th></th></tr></thead><tbody>";
 
   for (let i = 0; i < len; i++) {
     let bin = "";
