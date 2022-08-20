@@ -132,10 +132,11 @@
 
 .tables__procedimientos table {
   width: 80%;
+  tbody tr:last-child td {
+    border: none;
+  }
 }
-.tables__procedimientos table tbody tr:last-child td {
-  border: none;
-}
+
 .tables__procedimientos::before {
   content: "Bước 2: Tìm tích Tìm tích cực tiểu bằng cách tìm những cặp số khác nhau 1 bit. Vị trí khác nhau được đánh dấu bằng dấu gạch giữa ' - ' và tiếp tục tìm trong Table 1 những cặp khác nhau 1 bit.";
   font-size: 1.6rem;
@@ -144,54 +145,144 @@
     font-size: 1.4rem;
   }
 }
-.tables__finales,
+.tables__finales {
+  margin-top: 40px;
+  flex-direction: column;
+  align-items: center;
+  &::before {
+    content: "Bước 3: Lập bảng để tìm các tích quan trọng từ các tích cực tiểu.";
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
+  table {
+    padding: 0px;
+    border: none;
+  }
+  table thead tr th {
+    border: none;
+  }
+  table tbody tr td {
+    border: none;
+    &:not(:last-child) {
+      border: none;
+      border-right: 1px solid #111;
+      border-bottom: 1px solid #111;
+    }
+  }
+  table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid #111;
+  }
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  table thead tr th:not(:last-child) {
+    border-right: 1px solid #111;
+  }
+  table thead tr th:not(:last-child) {
+    border-bottom: 1px solid #111;
+  }
+  table thead tr th:last-child {
+    border-bottom: 1px solid #111;
+  }
+}
 .tables__results {
   flex-direction: column;
   align-items: center;
+  &::before {
+    content: "Bước 4: Kết Quả";
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
 }
-.tables__finales::before {
-  content: "Bước 3: Lập bảng để tìm các tích quan trọng từ các tích cực tiểu.";
-  font-size: 1.6rem;
+// test
+.tables__iniciales {
+  &::before {
+    content: "Bước 1: Đổi các đỉnh 1 ra các số nhị phân và phân chia từng nhóm ra có tổng số bit 1 bằng nhau.";
+    margin-top: 30px;
+  }
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 100px;
+  &__table1 {
+    table {
+      border: none;
+      tbody tr:last-child td {
+        border: none;
+        border-right: 1px solid #111;
+      }
+      tbody tr:last-child td:last-child {
+        border: none;
+      }
+    }
+    thead {
+      tr th {
+        border: none;
+        border-bottom: 1px solid #111;
+      }
+      tr th:not(:last-child) {
+        border-right: 1px solid #111;
+      }
+    }
+    tbody {
+      tr td {
+        border: none;
+        border-bottom: 1px solid #111;
+      }
+      tr td:not(:last-child) {
+        border-right: 1px solid #111;
+      }
+    }
+  }
+}
+
+.tables__iniciales {
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 100px;
   font-weight: bold;
-  margin-bottom: 25px;
+  font-size: 1.6rem;
   @include respond(phone) {
     font-size: 1.4rem;
   }
-}
-.tables__results::before {
-  content: "Bước 4: Kết Quả";
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 25px;
-  @include respond(phone) {
-    font-size: 1.4rem;
+  &__table2 {
+    table {
+      border: none;
+      tbody tr:last-child td {
+        border: none;
+        border-right: 1px solid #111;
+      }
+      tbody tr:last-child td:last-child {
+        border: none;
+      }
+    }
+    thead {
+      tr th {
+        border: none;
+        border-bottom: 1px solid #111;
+        padding: 20px;
+      }
+      tr th:not(:last-child) {
+        border-right: 1px solid #111;
+      }
+    }
+    tbody {
+      tr td {
+        border: none;
+        border-bottom: 1px solid #111;
+        padding: 10px;
+        text-align: center;
+      }
+      tr td:not(:last-child) {
+        border-right: 1px solid #111;
+      }
+    }
   }
-}
-.tables__finales table thead tr th,
-.tables__finales table tbody tr td {
-  border: none;
-}
-.tables__finales table tbody tr td:not(:last-child) {
-  border: none;
-  border-right: 1px solid #111;
-  border-bottom: 1px solid #111;
-}
-.tables__finales table tbody tr:not(:last-child) td {
-  border-bottom: 1px solid #111;
-}
-.tables__finales table tbody tr:last-child td {
-  border-bottom: none;
-}
-.tables__finales table {
-  padding: 0px;
-  border: none;
-}
-.tables__finales table thead tr th:not(:last-child) {
-  border-right: 1px solid #111;
-}
-.tables__finales table thead tr th:not(:last-child) {
-  border-bottom: 1px solid #111;
-}
-.tables__finales table thead tr th:last-child {
-  border-bottom: 1px solid #111;
 }

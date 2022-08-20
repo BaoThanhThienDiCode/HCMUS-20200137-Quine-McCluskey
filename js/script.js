@@ -81,7 +81,7 @@ function app(entrada) {
   // Create table 1
   let insert = "";
   let tabla1 = "";
-  tabla1 += `<table border=1><thead><tr><th>Decimal</th>`;
+  tabla1 += `<table border=1><thead><tr><th>Hệ số 10</th>`;
 
   let len = Math.pow(2, variable);
   let s = [];
@@ -91,7 +91,7 @@ function app(entrada) {
     tabla1 += "<th>" + abc[i].toUpperCase() + "</th>";
   }
 
-  tabla1 += "<th>Index</th></tr></thead><tbody>";
+  tabla1 += "<th>Tổng số 1 trong ABCD</th></th></tr></thead><tbody>";
 
   for (let i = 0; i < len; i++) {
     let bin = "";
@@ -152,7 +152,8 @@ function app(entrada) {
   }
   // creat sort index
   let tabla2 = "";
-  tabla2 += "<table border=1><thead><tr><th>Group</th><th>Decial</th>";
+  tabla2 +=
+    "<table border=1><thead><tr><th>Nhóm</th><th>Hệ số 10 của nhóm</th>";
   for (let i = 0; i < variable; i++) {
     tabla2 += "<th>" + abc[i].toUpperCase() + "</th>";
   }
@@ -308,7 +309,7 @@ function app(entrada) {
     index3 = 0;
     if (to.length >= 1) {
       tabla +=
-        `<table class"table" border=1><thead><tr><th>Table ` +
+        `<table class"table" border=1><thead><tr><th>Bảng ` +
         tables +
         "</th><tr></thead><tbody>";
 
